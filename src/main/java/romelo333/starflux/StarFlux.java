@@ -35,6 +35,8 @@ public class StarFlux implements ModBase {
     public static File mainConfigDir;
     public static Configuration config;
 
+    private static int modGuiIndex = 0;
+    public static final int GUI_CONTROLLER = modGuiIndex++;
 //    public static CreativeTabs tabStarFlux = new CreativeTabs("StarFlux") {
 //        @Override
 //        @SideOnly(Side.CLIENT)

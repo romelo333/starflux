@@ -3,9 +3,11 @@ package romelo333.starflux.proxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.network.NetworkRegistry;
 import mcjty.lib.base.GeneralConfig;
 import net.minecraftforge.common.config.Configuration;
 import romelo333.starflux.StarFlux;
+import romelo333.starflux.blocks.ModBlocks;
 
 public abstract class CommonProxy {
 
@@ -16,7 +18,7 @@ public abstract class CommonProxy {
         mainConfig = StarFlux.config;
         readMainConfig();
 //        ModItems.init();
-//        ModBlocks.init();
+        ModBlocks.init();
 //        ModCrafting.init();
     }
 
@@ -41,7 +43,7 @@ public abstract class CommonProxy {
     }
 
     public void init(FMLInitializationEvent e) {
-//        NetworkRegistry.INSTANCE.registerGuiHandler(DeepResonance.instance, new GuiProxy());
+        NetworkRegistry.INSTANCE.registerGuiHandler(StarFlux.instance, new GuiProxy());
 //        MinecraftForge.EVENT_BUS.register(new ForgeEventHandlers());
 //        FMLCommonHandler.instance().bus().register(new FMLEventHandlers());
     }
