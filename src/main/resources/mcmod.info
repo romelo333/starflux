@@ -1,0 +1,16 @@
+[
+{
+  "modid": "starflux",
+  "name": "Star Flux",
+  "description": "Store power in a stable star",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["romelo333", "McJty"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
